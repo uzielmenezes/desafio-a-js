@@ -10,6 +10,10 @@ export class ContaCorrente { // exportando o módulo da classe para o index.js
 		}
 	}
 
+	get cliente() {
+		return this._cliente;
+	}
+
 	_saldo = 0; // tornando o atributo privado com underline // verificar proposta com # https://github.com/tc39/proposal-class-fields#private-fields
 
 	// criando uma função para saque
