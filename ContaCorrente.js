@@ -16,6 +16,10 @@ export class ContaCorrente { // exportando o módulo da classe para o index.js
 
 	_saldo = 0; // tornando o atributo privado com underline // verificar proposta com # https://github.com/tc39/proposal-class-fields#private-fields
 
+	get saldo() {
+		return this._saldo;
+	}
+
 	// criando uma função para saque
 	sacar(valor) { 
 		if(this._saldo >= valor) {
