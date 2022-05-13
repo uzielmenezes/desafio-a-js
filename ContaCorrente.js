@@ -1,6 +1,15 @@
+import {Cliente} from "./Cliente.js"
+
 export class ContaCorrente { // exportando o módulo da classe para o index.js	
 	agencia;				// criando a classe para o ''molde'' ContaCorrente
-	cliente;
+	_cliente;
+
+	set cliente(novoValor) {
+		if(novoValor instanceof Cliente) {
+			this._cliente = novoValor;
+		}
+	}
+
 	_saldo = 0; // tornando o atributo privado com underline // verificar proposta com # https://github.com/tc39/proposal-class-fields#private-fields
 
 	// criando uma função para saque
