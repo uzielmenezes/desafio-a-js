@@ -4,7 +4,7 @@ export class ContaCorrente { // exportando o módulo da classe para o index.js
 	agencia;				// criando a classe para o ''molde'' ContaCorrente
 	_cliente;
 
-	set cliente(novoValor) {
+	set cliente(novoValor) {						// criando condições para modificar o cliente e tornando buscável não somente cliente como o saldo
 		if(novoValor instanceof Cliente) {
 			this._cliente = novoValor;
 		}
@@ -20,7 +20,7 @@ export class ContaCorrente { // exportando o módulo da classe para o index.js
 		return this._saldo;
 	}
 
-	constructor(agencia, cliente ) {
+	constructor(agencia, cliente ) {  // construtor adicionado para inicializar os atributos agencia e cliente
 		this.agencia = agencia;
 		this.cliente = cliente;
 	}
