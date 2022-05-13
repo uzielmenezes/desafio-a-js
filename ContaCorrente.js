@@ -22,7 +22,7 @@ export class ContaCorrente { // exportando o módulo da classe para o index.js
 
 	constructor(agencia, cliente ) {
 		this.agencia = agencia;
-		this._cliente = cliente;
+		this.cliente = cliente;
 	}
 
 	// criando uma função para saque
