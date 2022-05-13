@@ -1,6 +1,7 @@
 import {Cliente} from "./Cliente.js"
 
 export class ContaCorrente { // exportando o módulo da classe para o index.js	
+	static numeroDeContas = 0;
 	agencia;				// criando a classe para o ''molde'' ContaCorrente
 	_cliente;
 
@@ -23,6 +24,7 @@ export class ContaCorrente { // exportando o módulo da classe para o index.js
 	constructor(agencia, cliente ) {  // construtor adicionado para inicializar os atributos agencia e cliente
 		this.agencia = agencia;
 		this.cliente = cliente;
+		ContaCorrente.numeroDeContas += 1;
 	}
 
 	// criando uma função para saque
