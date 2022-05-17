@@ -2,7 +2,7 @@ export class Conta {
 	constructor(saldoInicial, cliente, agencia) {
 		this._saldo = saldoInicial;
 		this._cliente = cliente;
-		this._agencia = agencia;
+		this._agencia = agencia;		
 	}
 
 	set cliente(novoValor) { // criando condições para modificar o cliente e tornando buscável não somente cliente como o saldo
@@ -18,12 +18,14 @@ export class Conta {
 	get saldo() {
 		return this._saldo;
 	}
-	
+
 	// Funções de saque, deposito e transferência
 	sacar(valor) { 
-		if(this._saldo >= valor) {
-			this._saldo -= valor;
-			return valor;
+		let taxa = 1;
+		const valorSacado = taxa * valor;
+		if(this._saldo >= valorSacado) {
+			this._saldo -= valorSacado;
+			return valorSacado;
 		}
 	}
 
