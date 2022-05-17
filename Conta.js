@@ -29,7 +29,7 @@ export class Conta {
 		
 	}
 
-	_sacar(valor, taxa) {
+	_sacar(valor, taxa) { // método privado para personalizar o saque de acordo com um tipo de conta
 		const valorSacado = taxa * valor;
 		if(this._saldo >= valorSacado) {
 			this._saldo -= valorSacado;
