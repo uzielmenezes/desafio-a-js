@@ -1,5 +1,8 @@
 export class Conta {
-	constructor(saldoInicial, cliente, agencia) {
+	constructor(saldoInicial, cliente, agencia) { // construtor adicionado para inicializar os atributos agencia e cliente
+		
+		/* tornando o atributo privado com underline // verificar proposta com # 
+		https://github.com/tc39/proposal-class-fields#private-fields */
 		this._saldo = saldoInicial;
 		this._cliente = cliente;
 		this._agencia = agencia;		
