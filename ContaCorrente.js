@@ -9,7 +9,7 @@ export class ContaCorrente extends Conta { // exportando o módulo da classe par
 	}
 
 	sacar(valor) { 
-		let taxa = 1;
+		let taxa = 1.1;
 		const valorSacado = taxa * valor;
 		if(this._saldo >= valorSacado) {
 			this._saldo -= valorSacado;
