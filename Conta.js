@@ -4,7 +4,7 @@ export class Conta {
 		this._cliente = cliente;
 		this._agencia = agencia;
 	}
-
+	// Funções de saque, deposito e transferência
 	sacar(valor) { 
 		if(this._saldo >= valor) {
 			this._saldo -= valor;
