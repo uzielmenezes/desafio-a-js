@@ -4,6 +4,21 @@ export class Conta {
 		this._cliente = cliente;
 		this._agencia = agencia;
 	}
+
+	set cliente(novoValor) { // criando condições para modificar o cliente e tornando buscável não somente cliente como o saldo
+		if(novoValor instanceof Cliente) {
+			this._cliente = novoValor;
+		}
+	}
+
+	get cliente() {
+		return this._cliente;
+	}
+
+	get saldo() {
+		return this._saldo;
+	}
+	
 	// Funções de saque, deposito e transferência
 	sacar(valor) { 
 		if(this._saldo >= valor) {
