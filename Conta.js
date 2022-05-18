@@ -1,14 +1,14 @@
+// Classe abstrata
 export class Conta {
 	constructor(saldoInicial, cliente, agencia) { // construtor adicionado para inicializar os atributos agencia e cliente
-		
+		if(this.constructor == Conta) {
+			throw new Error("Você não deveria instanciar um objeto do tipo \"Conta\".");
+		}			
 		/* tornando o atributo privado com underline // verificar proposta com # 
 		https://github.com/tc39/proposal-class-fields#private-fields */
 		this._saldo = saldoInicial;
 		this._cliente = cliente;
-		this._agencia = agencia;
-		if(this.constructor == Conta) {
-			console.log("Você não deveria instanciar um objeto do tipo \"Conta\".");
-		}		
+		this._agencia = agencia;			
 	}
 
 	set cliente(novoValor) { // criando condições para modificar o cliente e tornando buscável não somente cliente como o saldo
