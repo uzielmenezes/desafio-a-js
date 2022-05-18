@@ -2,7 +2,7 @@
 export class Conta {
 	constructor(saldoInicial, cliente, agencia) { // construtor adicionado para inicializar os atributos agencia e cliente
 		if(this.constructor == Conta) {
-			throw new Error("Você não deveria instanciar um objeto do tipo \"Conta\".");
+			throw new Error("Você não deveria instanciar um objeto do tipo \"Conta\", pois se trata de uma classe abstrata.");
 		}			
 		/* tornando o atributo privado com underline // verificar proposta com # 
 		https://github.com/tc39/proposal-class-fields#private-fields */
