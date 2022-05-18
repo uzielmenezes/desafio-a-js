@@ -5,7 +5,10 @@ export class Conta {
 		https://github.com/tc39/proposal-class-fields#private-fields */
 		this._saldo = saldoInicial;
 		this._cliente = cliente;
-		this._agencia = agencia;		
+		this._agencia = agencia;
+		if(this.constructor == Conta) {
+			console.log("Você não deveria instanciar um objeto do tipo \"Conta\".");
+		}		
 	}
 
 	set cliente(novoValor) { // criando condições para modificar o cliente e tornando buscável não somente cliente como o saldo
