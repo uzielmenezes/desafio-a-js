@@ -2,9 +2,9 @@
 // para informar ao node que se trata, sim, de um módulo
 
 import {Cliente} from "./Cliente.js" // importando os módulos necessários para o projeto
-import {ContaCorrente} from "./ContaCorrente.js"
-import {ContaPoupanca} from "./ContaPoupanca.js"
-import {ContaSalario} from "./ContaSalario.js"
+import {ContaCorrente} from "./Conta/ContaCorrente.js"
+import {ContaPoupanca} from "./Conta/ContaPoupanca.js"
+import {ContaSalario} from "./Conta/ContaSalario.js"
 
 const cliente1 = new Cliente("Ricardo", 11122233309); // objetos criados a partir do molde Cliente com constructor definido
 
