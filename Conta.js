@@ -1,7 +1,7 @@
 // Classe abstrata
 export class Conta {
 	constructor(saldoInicial, cliente, agencia) { // construtor adicionado para inicializar os atributos agencia e cliente
-		if(this.constructor == Conta) {
+		if(this.constructor == Conta) { // colocando um erro informando sobre a classe abstrata
 			throw new Error("Você não deveria instanciar um objeto do tipo \"Conta\", pois se trata de uma classe abstrata.");
 		}			
 		/* tornando o atributo privado com underline // verificar proposta com # 
