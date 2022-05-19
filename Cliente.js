@@ -7,6 +7,10 @@ export class Cliente {  // exportando o módulo da classe para o index.js
 		this._senha = senha;
 	}
 	
+	autenticar(senha){
+		return senha == this._senha;
+	}
+	
 	get cpf() {				// tornando o cpf somente buscável e não modificável
 		return this._cpf;
 	}
