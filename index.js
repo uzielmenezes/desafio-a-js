@@ -2,7 +2,10 @@
 // para informar ao node que se trata, sim, de um módulo
 
 import {Cliente} from "./Cliente.js" // importando os módulos necessários para o projeto
-import {ContaCorrente} from "./Conta/ContaCorrente.js"
+import {Gerente} from "./Funcionarios/Gerente.js"
+import {Diretor} from "./Funcionarios/Diretor.js"
+import {SistemaAutenticacao} from "./SistemaAutenticacao.js"
+/*import {ContaCorrente} from "./Conta/ContaCorrente.js"
 import {ContaPoupanca} from "./Conta/ContaPoupanca.js"
 import {ContaSalario} from "./Conta/ContaSalario.js"
 
@@ -14,4 +17,15 @@ const contaSalario1 = new ContaSalario(100, cliente1, 1001);
 
 console.log(contaPoupanca1);
 console.log(contaCorrente1);
-console.log(contaSalario1);
+console.log(contaSalario1); */ // Código relacionado às contas
+
+const diretor = new Diretor("Rodrigo", 10000, 12345678900);
+diretor.cadastrarSenha("123456");
+const gerente = new Gerente("Ricardo", 5000, 12378945601);
+gerente.cadastrarSenha("123");
+
+const estaLogado = SistemaAutenticacao.login(diretor, "123456");
+const estaLogado2 = SistemaAutenticacao.login(gerente, "123");
+
+console.log(estaLogado);
+console.log(estaLogado2);
