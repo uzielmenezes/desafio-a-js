@@ -4,12 +4,14 @@
 import {Cliente} from "./Cliente.js" // importando os módulos necessários para o projeto
 import {ContaCorrente} from "./ContaCorrente.js"
 import {ContaPoupanca} from "./ContaPoupanca.js"
-import {Conta} from "./Conta.js"
+import {ContaSalario} from "./ContaSalario.js"
 
 const cliente1 = new Cliente("Ricardo", 11122233309); // objetos criados a partir do molde Cliente com constructor definido
 
 const contaCorrente1 = new ContaCorrente(cliente1, 1001); // objetos/instâncias criados a partir do molde ContaCorrente com constructor definido;
 const contaPoupanca1 = new ContaPoupanca(50, cliente1, 1001);
+const contaSalario1 = new ContaSalario(100, cliente1, 1001);
 
 console.log(contaPoupanca1);
 console.log(contaCorrente1);
+console.log(contaSalario1);
